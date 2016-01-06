@@ -1,0 +1,17 @@
+<h1><a href="/">Add Users</a></h1>
+<section id="add">
+  <form action="/" method="post">
+    <textarea name="email" placeholder="User email"></textarea>
+    <textarea name="password" placeholder="User password"></textarea>
+    <input type="submit" value="Add user">
+  </form>
+</section>
+
+<!-- If you want to see list of Users uncomment following !-->
+<!-- <h1><a href="/">List Users</a></h1> -->
+<% @users.each do |user| %>
+    <!-- <p>
+      <%= user.id %>
+      <%= user.email %>
+    </p> -->
+<% end %>  
