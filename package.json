@@ -1,0 +1,30 @@
+{
+  "name": "challenge-sinatra-ruby",
+  "version": "1.0.0",
+  "description": "Template for api-first-spec in Sinatra",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukeshni/challenge-sinatra-ruby.git"
+  },
+  "keywords": [
+    "ruby",
+    "sinatra",
+    "mocha",
+    "api"
+  ],
+  "author": "Givery Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sukeshni/challenge-sinatra-ruby/issues"
+  },
+  "homepage": "https://github.com/sukeshni/challenge-sinatra-ruby#readme",
+  "devDependencies": {
+    "api-first-spec": "^0.2.9",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
