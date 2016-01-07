@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'data_mapper'
+require 'json'
 
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/service.db")
 
@@ -12,6 +13,10 @@ class User
 end  
 
 DataMapper.finalize.auto_upgrade!
+
+before do
+  headers "Content-Type" => "application/json; charset=utf8"
+end
 
 get '/' do 
   @users = User.all :order => :id.desc
@@ -27,9 +32,11 @@ post '/' do
   redirect '/'
 end
 
-get '/api/user/:id' do 
+# get '/api/user/:id' do 
+get '/api/user' do 
   @user = User.get params[:id]
-  erb :user
+  # erb :user
+  { :result => 'Logged In !'}.to_json
 end
 
 not_found do
