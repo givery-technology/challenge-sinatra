@@ -1,0 +1,11 @@
+build:
+  - npm install
+  - gem install sinatra
+  - gem install shotgun
+  - gem install sqlite3 datamapper dm-sqlite-adapter
+  - gem install json
+web:
+  command: shotgun challenge.rb
+  port: 9393
+  console: true
+test: mocha --recursive spec/*
